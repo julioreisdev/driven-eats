@@ -1,0 +1,22 @@
+header {
+  background-color: #CF2B2B;
+  padding: 0.5rem 1rem 1rem 1rem;
+  width: 100%;
+  height: 92px;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.4));
+  position: fixed;
+  top: 0;
+}
+
+.logo {
+  color: #fff;
+}
+
+.logo h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 3rem;
+}
+
+.logo h2 {
+  font-size: 1.25rem;
+}
