@@ -1,5 +1,5 @@
 main {
-  width: 90%;
+  width: 95%;
   margin: calc(92px + 1.5rem) auto 0 auto;
 }
 
@@ -41,8 +41,9 @@ main {
   padding: 0.5rem;
   border-radius: 3px;
   box-shadow: 0 0 3px gray;
-  margin: 0.75rem 0.5rem;
+  margin: 0.75rem 0.5rem 0.75rem 0.2rem;
   position: relative;
+  border: 5px solid #fff;
 }
 
 .item img {
