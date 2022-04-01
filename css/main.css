@@ -42,6 +42,7 @@ main {
   border-radius: 3px;
   box-shadow: 0 0 3px gray;
   margin: 0.75rem 0.5rem;
+  position: relative;
 }
 
 .item img {
@@ -62,6 +63,22 @@ main {
 
 .item p:last-child {
   font-weight: 400;
+}
+
+/* SELEÇÃO DE ITENS */
+
+.selecionado {
+  border: 5px solid rgba(50, 183, 47, 1);
+}
+
+.item .icone-check {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(50, 183, 47, 1);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /*  */

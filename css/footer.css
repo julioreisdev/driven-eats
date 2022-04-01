@@ -19,6 +19,13 @@ footer button {
   color: #fff;
 }
 
+.botao-ativo {
+  cursor: pointer;
+  background-color: rgba(50, 183, 47, 1);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 button p {
   width: 60%;
   margin: 0 auto;
