@@ -4,5 +4,9 @@ body {
 }
 
 .display-none {
-  display: none;
+  display: none !important;
+}
+
+.opaco {
+  opacity: 0.2;
 }

@@ -64,7 +64,7 @@ function mensagemPedido(preco) {
 }
 
 function valorTotalPedido() {
-let precoPrato = valorConversivel(document.querySelector(".pratos .selecionado .preco").innerHTML)
+  let precoPrato = valorConversivel(document.querySelector(".pratos .selecionado .preco").innerHTML)
   let precoBebida = valorConversivel(document.querySelector(".bebidas .selecionado .preco").innerHTML)
   let precoSobremesa = valorConversivel(document.querySelector(".sobremesas .selecionado .preco").innerHTML)
   let precoTotal = (precoPrato+precoBebida+precoSobremesa)
@@ -79,6 +79,39 @@ function verificaBotaoAtivo() {
   return false
 }
 
+function opaco() {
+  let header = document.querySelector('header')
+  let main = document.querySelector('main')
+  let footer = document.querySelector('footer')
+
+  header.classList.add("opaco")
+  main.classList.add("opaco")
+  footer.classList.add("opaco")
+}
+
+function mostraPedido() {
+  let prato = document.querySelector(".prato")
+  let bebida = document.querySelector(".bebida")
+  let sobremesa = document.querySelector(".sobremesa")
+  let precoPrato = document.querySelector(".preco-prato")
+  let precoBebida = document.querySelector(".preco-bebida")
+  let precoSobremesa = document.querySelector(".preco-sobremesa")
+  let precoTotal = document.querySelector(".preco-total")
+
+  prato.innerHTML += document.querySelector(".pratos .selecionado h4").innerHTML
+  bebida.innerHTML += document.querySelector(".bebidas .selecionado h4").innerHTML
+  sobremesa.innerHTML += document.querySelector(".sobremesas .selecionado h4").innerHTML
+
+  precoPrato.innerHTML += document.querySelector(".pratos .selecionado .preco").innerHTML
+  precoBebida.innerHTML += document.querySelector(".bebidas .selecionado .preco").innerHTML
+  precoSobremesa.innerHTML += document.querySelector(".sobremesas .selecionado .preco").innerHTML
+  precoTotal.innerHTML += valorTotalPedido()
+
+  let resumoPedido = document.querySelector(".confirmacao-pedido")
+  console.log("Estou na area")
+  resumoPedido.classList.remove("display-none")
+}
+
 function fechaPedido() {
   let precoTotal = valorTotalPedido()
   let mensagemNormal = mensagemPedido(precoTotal)
@@ -86,6 +119,9 @@ function fechaPedido() {
   let mensagemURI = encodeURIComponent(mensagemNormal)
 
   if (verificaBotaoAtivo) {
-    ancora.href="https://wa.me/5586981616420?text="+mensagemURI
+    opaco()
+    mostraPedido()
+    let botaoConfirma = document.querySelector(".link-confirma")
+    botaoConfirma.href = "https://wa.me/5589981043496?text="+mensagemURI
   }
 }

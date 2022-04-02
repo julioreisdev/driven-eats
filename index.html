@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/confirmacao-pedido.css">
   <link rel="stylesheet" href="css/footer.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,6 +128,27 @@
       </ul>
     </div>
   </main>
+  <div class="confirmacao-pedido display-none">
+    <h4>Confirme seu pedido</h4>
+    <div>
+      <p class="confirmacao-nome prato"></p>
+      <p class="confirmacao-preco preco-prato"></p>
+    </div>
+    <div>
+      <p class="confirmacao-nome bebida"></p>
+      <p class="confirmacao-preco preco-bebida"></p>
+    </div>
+    <div>
+      <p class="confirmacao-nome sobremesa"></p>
+      <p class="confirmacao-preco preco-sobremesa"></p>
+    </div>
+    <div>
+      <p class="confirmacao-preco-total">TOTAL</p>
+      <p class="confirmacao-preco preco-total">R$ </p>
+    </div>
+    <a class="link-confirma" href=""><button class="botao-confirmacao">Tudo certo, pode pedir!</button></a>
+    <a href="index.html"><button class="botao-cancelamento">Cancelar</button></a>
+  </div>
   <footer>
     <a href="#" onclick="fechaPedido()"><button><p>Selecione os 3 itens para fechar o pedido</p></button></a>
   </footer>
